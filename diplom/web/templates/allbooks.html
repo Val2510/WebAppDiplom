@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="/static/css/style4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../templates/index.html">BOOKFree</a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="/account/">My Account</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by title or author">
+            <button onclick="searchBooks()">Search</button>
+        </div>
+
+        <div class="container">
+            <h2>
+                Find books in your city: just enter the author's name or book title. We will show the name and email of the book owner from your city so that you can contact for an exchange. Enjoy!</h2>
+            <div id="book-list">
+                <!-- Таблица для отображения списка книг -->
+                <table class="table1">
+                    <thead>
+                        <tr>
+                            <th class="th">Title</th>
+                            <th class="th">Author</th>
+                            <th class="th">Owner</th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-list-body">
+                        <!-- Место для отображения книг -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="ownerInfoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="ownerInfo"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
+
+
+
+
